@@ -8,7 +8,7 @@ tutorials, and general news about the things I was up to.
 In 2008 my credit card number changed and the domain name lapsed. It's now camped by a squatter and I've moved
 over to JeffVerkoeyen.com.
 
-![Concept](https://raw.githubusercontent.com/featherless/2004-2007-TheJeffFiles/master/gfx/preview.png)
+![Concept](https://raw.githubusercontent.com/featherless/2004-2007-TheJeffFiles/master/gfx/2005-summer.png)
 
 ## Previewing the site
 

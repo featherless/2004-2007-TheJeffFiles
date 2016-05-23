@@ -1,0 +1,68 @@
+<html>
+ <head>
+  <link REL="StyleSheet" TYPE="text/css" HREF="layout.css">
+ </head>
+ <body>
+<h2>bmp_ChangeBits</h2>
+<hr>
+The <b>bmp_ChangeBits</b> function converts a bitmap to the requested bit depth.
+This function requires that you have set a palette if you are converting to 4 or
+8 bit color depths.<p>
+
+Syntax
+<blockquote><pre class="list">void bmp_ChangeBits(
+
+   bmp_DATA* data,
+   USHORT bits,
+   int* ErrorCode
+);
+</pre></blockquote>     
+&nbsp;<p>
+
+Parameters
+<blockquote>
+   <i>data</i>
+    <blockquote>
+      [in, out] Pointer to a <a href="bmp_DATA.htm">bmp_DATA</a> structure to be
+       changed.
+    </blockquote>
+   <i>bits</i>
+    <blockquote>
+      [in] The new color depth for the image.  If the bit depth you requested is
+       already applied to the bitmap, it will not affect the bitmap.
+    </blockquote>
+   <i>ErrorCode</i>
+    <blockquote>
+      [out] Pointer to an int value that will hold the error code from this
+       function if there is one.  This parameter is optional.
+    </blockquote>
+</blockquote>
+&nbsp;<p>
+
+Remarks
+<blockquote>
+   <i>Supported Bit Depths:</i> 4, 8, 24<p>
+   If the bit depth you request is the same as the one that the bitmap is
+   already at, the bitmap will not be changed.<p>
+   If you are converting to 8 or 4 bits, you must set the global palette prior
+   to calling this function using
+   <a href="setGlobalPalette.htm">setGlobalPalette</a>.
+</blockquote>
+&nbsp;<p> 
+          
+Error Codes
+<blockquote>                                                    
+   <i>INVALID_POINTER</i>- The pointer passed was invalid and unusable.<br>
+   <i>UNSUPPORTED_OPERATION</i>- This operation is not supported.
+
+</blockquote>
+&nbsp;<p> 
+
+See also
+<blockquote>
+   <a href="bmp_DATA.htm">bmp_DATA</a>
+</blockquote>
+
+<p>         
+ </body>
+</html>

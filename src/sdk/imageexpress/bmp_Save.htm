@@ -1,0 +1,62 @@
+               <html>
+ <head>
+  <link REL="StyleSheet" TYPE="text/css" HREF="layout.css">
+ </head>
+ <body>
+<h2>bmp_Save</h2>
+<hr>
+The <b>bmp_Save</b> function saves a bitmap (*.bmp) file to your hard drive.<p>
+
+Syntax
+<blockquote><pre class="list">bmp_DATA bmp_Save(
+
+   const char* FileName,
+   const ico_DATA* data,
+   int* ErrorCode
+);
+</pre></blockquote>     
+&nbsp;<p>
+
+Parameters
+<blockquote>
+   <i>FileName</i>
+    <blockquote>
+      [in] Pointer to a null-terminated string saying the name of the file you
+       would like to save.
+    </blockquote>
+   <i>data</i>
+    <blockquote>
+      [in] Pointer to a <a href="bmp_DATA.htm">bmp_DATA</a> structure.
+    </blockquote>
+   <i>ErrorCode</i>
+    <blockquote>
+      [out] Pointer to an int value that will hold the error code from this
+       function if there is one.  This parameter is optional.
+    </blockquote>
+</blockquote>
+&nbsp;<p>
+
+Remarks
+<blockquote>
+   <i>Supported Bit Depths:</i> 4, 8, 24<p>
+   The current version of image express only supports saving of windows
+   bitmaps.
+</blockquote>
+&nbsp;<p> 
+          
+Error Codes
+<blockquote>
+   <i>INVALID_POINTER</i>- The pointer passed was invalid and unusable.<br>
+   <i>SAVE_FILE_ERROR</i>- There was an error opening the file for writing.
+
+</blockquote>
+&nbsp;<p> 
+
+See also
+<blockquote>
+   <a href="bmp_Open.htm">bmp_Open</a>, <a href="bmp_DATA.htm">bmp_DATA</a>
+</blockquote>
+
+<p>         
+ </body>
+</html>

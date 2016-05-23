@@ -1,0 +1,45 @@
+<html>
+ <head>
+  <link REL="StyleSheet" TYPE="text/css" HREF="layout.css">
+ </head>
+ <body>
+<h2>setGlobalPalette</h2>
+<hr>
+The <b>setGlobalPalette</b> function sets which palette you want to use when
+converting to a resolution that uses a palette.<p>
+
+Syntax
+<blockquote><pre class="list">void setGlobalPalette(
+
+   <a href="paletteType.htm">paletteType</a> palette
+);
+</pre></blockquote>     
+&nbsp;<p>
+
+Parameters
+<blockquote>
+   <i>palette</i>
+    <blockquote>
+      [in] Enumerated value of which palette to set.  This must be one of the
+       <a href="paletteType.htm">paletteType</a> enumerations.
+    </blockquote>
+</blockquote>
+&nbsp;<p>
+
+Remarks
+<blockquote>
+   If you do not set a palette before doing conversions from a non-palette bit
+   depth to a bit depth using a palette, it will cause your program to use a
+   blank palette full of zeros.
+</blockquote>   
+&nbsp;<p> 
+
+See also
+<blockquote>
+   <a href="paletteType.htm">paletteType</a>
+</blockquote>
+
+
+<p>         
+ </body>
+</html>

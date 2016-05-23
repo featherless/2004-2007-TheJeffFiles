@@ -1,0 +1,50 @@
+<html>
+ <head>
+  <link REL="StyleSheet" TYPE="text/css" HREF="layout.css">
+ </head>
+ <body>
+<h2>bmp_Clear</h2>
+<hr>
+The <b>bmp_Clear</b> function cleans up the memory used by a
+<a href="bmp_DATA.htm">bmp_DATA</a> value.  Make sure to call this for each
+<a href="bmp_DATA.htm">bmp_DATA</a> that you use when you are done with it to
+avoid memory leaks.<p>
+
+Syntax
+<blockquote><pre class="list">void bmp_Clear(
+
+   <a href="bmp_DATA.htm">bmp_DATA</a>* data,
+   int* ErrorCode
+);
+</pre></blockquote>     
+&nbsp;<p>
+
+Parameters
+<blockquote>
+   <i>data</i>
+    <blockquote>
+      [in, out] Pointer to a <a href="bmp_DATA.htm">bmp_DATA</a> value.  This
+       value <i>will</i> be modified to clean up the dynamic memory.
+    </blockquote>
+   <i>ErrorCode</i>
+    <blockquote>
+      [out] Pointer to an int value that will hold the error code from this
+       function if there is one.  This parameter is optional.
+    </blockquote>
+</blockquote>
+&nbsp;<p>
+          
+Error Codes
+<blockquote>
+   <i>INVALID_POINTER</i>- The pointer passed was invalid and unusable.
+</blockquote>
+&nbsp;<p> 
+
+See also
+<blockquote>
+   <a href="bmp_Open.htm">bmp_Open</a>, <a href="bmp_DATA.htm">bmp_DATA</a>
+</blockquote>
+
+<p>         
+ </body>
+</html>

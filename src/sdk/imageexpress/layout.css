@@ -1,0 +1,25 @@
+a {
+            color: #0000FF;
+            text-decoration: underline;
+  }
+a:visited {
+            color: #0000FF;
+            text-decoration: underline;
+          }
+a:hover {
+            color: #FF0000;
+            text-decoration: underline;
+        }
+a:active {
+            color: #FF0000;
+            text-decoration: none;
+         }
+body {
+            color: #000000;
+            font-size: 14;
+            font-family: sans-serif;
+     }
+pre.list {
+            background: #DDDDDD;
+            padding: 10px;
+         }

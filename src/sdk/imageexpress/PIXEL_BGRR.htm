@@ -1,0 +1,44 @@
+<html>
+ <head>
+  <link REL="StyleSheet" TYPE="text/css" HREF="layout.css">
+ </head>
+ <body>
+<h2>PIXEL_BGRR Structure</h2>
+<hr>
+The <b>PIXEL_BGRR</b> contains a single 24 bit pixel with one byte reserved.<p>
+
+Syntax
+<blockquote><pre class="list">struct PIXEL_BGRR {
+                                                           
+   BYTE b,g,r;
+   BYTE reserved;
+   PIXEL_BGRR() {}
+   PIXEL_BGRR(BYTE R,BYTE G,BYTE B) { r=R; g=G; b=B; reserved=0; }
+};
+</pre></blockquote>     
+&nbsp;<p>  
+
+Members
+<blockquote>                                  
+    <b>b</b>
+    <blockquote>
+       Holds the pixel's blue value.
+    </blockquote>                         
+    <b>g</b>
+    <blockquote>
+       Holds the pixel's green value.
+    </blockquote>                              
+    <b>r</b>
+    <blockquote>
+       Holds the pixel's red value.
+    </blockquote>                            
+    <b>reserved</b>
+    <blockquote>
+       Holds a reserved value.
+    </blockquote>            
+</blockquote>     
+&nbsp;<p>
+
+<p>         
+ </body>
+</html>

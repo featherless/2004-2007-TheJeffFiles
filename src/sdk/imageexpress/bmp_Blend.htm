@@ -1,0 +1,74 @@
+<html>
+ <head>
+  <link REL="StyleSheet" TYPE="text/css" HREF="layout.css">
+ </head>
+ <body>
+<h2>bmp_Blend</h2>
+<hr>
+The <b>bmp_Blend</b> function blends two bitmaps together using the equation
+dst*(1-blend)+src*blend.<p>
+
+Syntax
+<blockquote><pre class="list">void bmp_Blend(
+
+   const bmp_DATA* src,
+   bmp_DATA* dst,
+   float BlendFactor,
+   int* ErrorCode
+);
+</pre></blockquote>     
+&nbsp;<p>
+
+Parameters
+<blockquote>
+   <i>src</i>
+    <blockquote>
+      [in] The source bitmap to blend with.
+    </blockquote>
+   <i>dst</i>
+    <blockquote>
+      [in, out] The destination bitmap to blend with.
+    </blockquote>
+   <i>BlendFactor</i>
+    <blockquote>
+      [in] The blending factor, must be 0&lt;=x&lt;=1.
+    </blockquote>
+   <i>ErrorCode</i>
+    <blockquote>
+      [out] Pointer to an int value that will hold the error code from this
+       function if there is one.  This parameter is optional.
+    </blockquote>
+</blockquote>
+&nbsp;<p>
+
+Remarks
+<blockquote>
+   <i>Supported Bit Depths:</i> 8, 24<p>
+   Both images must be the same size for this operation to work correctly.
+   Here is an example of a couple of different blending values.<br>
+   src:<img border=1 src="src.bmp"><br>
+   dst:<img border=1 src="dst.bmp"><br>
+   result 0.0 factor:<img border=1 src="dst.bmp"><br>
+   result 0.5 factor:<img border=1 src="factor.bmp"><br>
+   result 1.0 factor:<img border=1 src="src.bmp"><br>
+
+</blockquote>
+&nbsp;<p> 
+          
+Error Codes
+<blockquote>                                                     
+   <i>INVALID_POINTER</i>- The pointer passed was invalid and unusable.<br>
+   <i>SIZES_NOT_SAME</i>- Both file sizes must be equal to perform the operation.<br>     
+   <i>UNSUPPORTED_OPERATION</i>- This operation is not supported.
+
+</blockquote>
+&nbsp;<p> 
+
+See also
+<blockquote>
+   <a href="bmp_BlendAlpha.htm">bmp_BlendAlpha</a>
+</blockquote>
+
+<p>         
+ </body>
+</html>

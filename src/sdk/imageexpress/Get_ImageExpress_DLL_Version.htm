@@ -1,0 +1,35 @@
+<html>
+ <head>
+  <link REL="StyleSheet" TYPE="text/css" HREF="layout.css">
+ </head>
+ <body>
+<h2>Get_ImageExpress_DLL_Version</h2>
+<hr>
+The <b>Get_ImageExpress_DLL_Version</b> function returns the version number of
+the DLL you are working with.  If the DLL version returned doesn't equal the
+version number in your header file, you are using an outdated header/DLL.<p>
+
+Syntax
+<blockquote><pre class="list">float Get_ImageExpress_DLL_Version();
+</pre></blockquote>     
+&nbsp;<p>
+
+Return Value
+<blockquote>
+   Returns the version number of Image Express.
+</blockquote>
+&nbsp;<p>
+
+Remarks
+<blockquote>
+   Use the following code to compare your header version to your DLL version:
+<blockquote>
+ <pre class="list">if(Get_ImageExpress_DLL_Version()!=IMAGEEXPRESS_VERSION)
+    /* exit here*/</pre>
+</blockquote>
+</blockquote>
+&nbsp;<p> 
+
+<p>         
+ </body>
+</html>

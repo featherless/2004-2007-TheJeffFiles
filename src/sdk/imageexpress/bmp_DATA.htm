@@ -1,0 +1,57 @@
+<html>
+ <head>
+  <link REL="StyleSheet" TYPE="text/css" HREF="layout.css">
+ </head>
+ <body>
+<h2>bmp_DATA Structure</h2>
+<hr>
+The <b>bmp_DATA</b> contains all of the information about a bitmap file.<p>
+
+Syntax
+<blockquote><pre class="list">struct bmp_DATA {
+                          
+    <a href="bmp_HEADER.htm">bmp_HEADER</a>      Header;
+    <a href="bmp_INFOHEADER.htm">bmp_INFOHEADER</a>  infoHeader;
+    <a href="PIXEL_BGRR.htm">PIXEL_BGRR</a>      lookupTable[256];
+    UINT            BMPType;
+    void*           Data;
+};
+</pre></blockquote>     
+&nbsp;<p>  
+
+Members
+<blockquote>                                  
+    <b>Header</b>
+    <blockquote>
+       Holds the bitmap header information.
+    </blockquote>                          
+    <b>infoHeader</b>
+    <blockquote>
+       Holds the bitmap information header information.
+    </blockquote>                  
+    <b>lookupTable[256]</b>
+    <blockquote>
+       The 256 color lookup table.  Only used for 4 and 8 bit depths.
+    </blockquote>         
+    <b>BMPType</b>
+    <blockquote>
+       The enumerated bitmap type.
+    </blockquote>         
+    <b>Data</b>
+    <blockquote>
+       Pointer to the bitmap's color data.  Must be typecast to the correct type
+        to be used.
+    </blockquote>
+</blockquote>     
+&nbsp;<p>  
+
+See also
+<blockquote>
+   <a href="bmp_HEADER.htm">bmp_HEADER</a>,
+   <a href="bmp_INFOHEADER.htm">bmp_INFOHEADER</a>,
+   <a href="PIXEL_BGRR.htm">PIXEL_BGRR</a>
+</blockquote>
+
+<p>         
+ </body>
+</html>

@@ -1,0 +1,73 @@
+<html>
+ <head>
+  <link REL="StyleSheet" TYPE="text/css" HREF="layout.css">
+ </head>
+ <body>
+<h2>bmp_Open</h2>
+<hr>
+The <b>bmp_Open</b> function opens a bitmap (*.bmp) file from your hard drive
+for editing.  The returned <a href="bmp_DATA.htm">bmp_DATA</a> structure can be
+used for all other bmp_* functions.  When you are finished with the
+<a href="bmp_DATA.htm">bmp_DATA</a> structure, you must call
+<a href="bmp_Clear.htm">bmp_Clear</a> to clean up the dynamic memory used.<p>
+
+Syntax
+<blockquote><pre class="list">bmp_DATA bmp_Open(
+
+   const char* FileName,
+   int* ErrorCode
+);
+</pre></blockquote>     
+&nbsp;<p>
+
+Parameters
+<blockquote>
+   <i>FileName</i>
+    <blockquote>
+      [in] Pointer to a null-terminated string saying the name of the file you
+       would like to load.
+    </blockquote>
+   <i>ErrorCode</i>
+    <blockquote>
+      [out] Pointer to an int value that will hold the error code from this
+       function if there is one.  This parameter is optional.
+    </blockquote>
+</blockquote>
+&nbsp;<p>
+
+Return Value
+<blockquote>
+   If the function succeeds, the return value will be a valid 
+   <a href="bmp_DATA.htm">bmp_DATA</a> structure.<p>
+   If the functions fails, ErrorCode will be set (if you passed a pointer to it)
+    and bmp_DATA will be an invalid value.
+</blockquote>
+&nbsp;<p>
+
+Remarks
+<blockquote>
+   <i>Supported Bit Depths:</i> 4, 8, 24<p>
+   The current version of image express only supports loading of windows
+   bitmaps.
+</blockquote>
+&nbsp;<p> 
+          
+Error Codes
+<blockquote>
+   <i>OPEN_FILE_NOT_FOUND</i>- The file couldn't be found.<br>
+   <i>OPEN_FILE_INVALID_TYPE</i>- This is not a valid bmp file.<br>
+   <i>OPEN_FILE_UNSUPPORTED_TYPE</i>- This is not a valid windows bitmap or is
+                                      not of the supported bit depths.
+
+</blockquote>
+&nbsp;<p> 
+
+See also
+<blockquote>
+   <a href="bmp_Save.htm">bmp_Save</a>, <a href="bmp_Clear.htm">bmp_Clear</a>,
+   <a href="bmp_DATA.htm">bmp_DATA</a>
+</blockquote>
+
+<p>         
+ </body>
+</html>
